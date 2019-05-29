@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: friday
+  namespace: devops
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: friday
+    spec:
+      containers:
+      - name: friday
+      image: core.harbor.ebupt.com/library/friday:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+

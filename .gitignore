@@ -1,0 +1,4 @@
+# used by Makefile
+/build/_workspace/
+/build/bin/
+
