@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/wylzabc/friday/add"
 )
 
 var router *gin.Engine
@@ -15,6 +16,7 @@ func InitRouter() {
 			"message": "pong",
 		})
 	})
+	router.POST("/add/add", add.Add)
 }
 func main() {
 	InitRouter()
