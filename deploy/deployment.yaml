@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: friday
-      image: core.harbor.ebupt.com/library/friday:latest
+        image: core.harbor.ebupt.com/library/friday:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
