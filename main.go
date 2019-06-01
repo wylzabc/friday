@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/wylzabc/friday/add"
+	"github.com/wylzabc/friday/subtraction"
 )
 
 var router *gin.Engine
@@ -17,6 +18,7 @@ func InitRouter() {
 		})
 	})
 	router.POST("/add/add", add.Add)
+	router.POST("/sub/sub", subtraction.Sub)
 }
 func main() {
 	InitRouter()
