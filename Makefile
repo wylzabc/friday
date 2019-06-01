@@ -7,7 +7,7 @@ friday:
 	@echo "Done building."
 	@echo "Run \"$(GOBIN)/friday\" to launch."
 
-test: addtest multitest
+test: addtest multitest subtest
 	@echo "Done test."
 
 addtest:
@@ -17,3 +17,7 @@ addtest:
 multitest:
 	$(shell pwd)/build/env.sh go test github.com/wylzabc/friday/multiplication -v -cover
 	@echo "Done test multi."
+
+subtest:
+	$(shell pwd)/build/env.sh go test github.com/wylzabc/friday/subtraction -v -cover
+	@echo "Done test sub."
